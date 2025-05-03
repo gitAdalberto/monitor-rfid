@@ -27,7 +27,7 @@ export default function Registros() {
     if (error) {
       console.error("Error al insertar:", error);
     } else {
-      console.log("Usuario insertado exitosamente:", data);
+      //console.log("Usuario insertado exitosamente:", data);
       await deleteUnregisteredByUid(uid);
     }
   }
@@ -41,13 +41,13 @@ export default function Registros() {
     if (error) {
       console.error("error al borrar unregistered:",error);
     } else {
-      console.log("delete exitoso",data);
+      //console.log("delete exitoso",data);
     }
   }
 
   
 
-  const fetchRegistros = async () => {
+  const fetchRegistros = async (date) => {
     const { data, error } = await supabase
       .from("registros")
       .select('id,uid,tipo,fecha,usuarios(nombre)')
@@ -57,7 +57,7 @@ export default function Registros() {
     if (error) {
       console.error("Error al obtener registros:", error);
     } else {
-      console.log(data);
+      //console.log(data);
       setRegistros(data);
     }
   };
@@ -107,7 +107,7 @@ export default function Registros() {
           table: 'registros',
         },
         async (payload) => {
-          console.log('Nuevo registro:', payload.new);
+          //console.log('Nuevo registro:', payload.new);
           await fetchRegistros();
         }
       )
@@ -123,7 +123,7 @@ export default function Registros() {
           table: 'unregistered',
         },
         (payload) => {
-          console.log('Nuevo registro en unregistered:', payload.new);
+          //console.log('Nuevo registro en unregistered:', payload.new);
           setUnregistered((prev) => [payload.new, ...prev]); 
         }
       )
