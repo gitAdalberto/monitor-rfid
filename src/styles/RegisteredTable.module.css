@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem;
+    display: block;
+    color: #2c003e;
+  }
+  
+  .table {
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.45);
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    border: none;
+    overflow: hidden;
+  }
+  
+  .table th{
+    background-color: #2c003e;
+    color: white;
+    font-weight: bold;
+  }
+
+  .table th,
+  .table td {
+    padding: 12px;
+    border: 1px solid #2c003e;
+    text-align: center;
+    border-top: none;
+    border-bottom: none;
+    border: none;
+    
+  }
+
+  .table tr{
+    color: #2c003e;
+  }
+  
+  .table tbody tr:hover{
+    background-color: #2c003e;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .table th:first-child,
+.table td:first-child {
+  border-left: none;
+}
+
+.table th:last-child,
+.table td:last-child {
+  border-right: none;
+}
+
+.advice{
+  background-color: #2c003e;
+  border-radius: 8px;
+  width: 100%;
+  padding: 1rem 0;
+}
+  

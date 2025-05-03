@@ -1,0 +1,39 @@
+.container{
+    background-color:none;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.calendar {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #2c003e;
+    font-weight: bold;
+    font-size: medium;
+}
+.label{
+    color: #2c003e;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.button{
+    background-color: #fff;    
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: gray;
+    border-style: solid;
+    font-weight: bold;
+    color: gray;
+    margin-top: 1rem;
+}
+
+.button:hover{
+    background-color: #2c003e;
+    color: white;
+    border-color: #2c003e;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
